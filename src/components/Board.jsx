@@ -3,8 +3,8 @@ import Tile from "./Tile";
 const createGrid = (rowCount, colCount) => {
   let tiles = []
 
-  for (let rIndex = 1; rIndex <= rowCount; rIndex++) {
-    for (let cIndex = 1; cIndex <= colCount; cIndex++) {
+  for (let rIndex = 0; rIndex < rowCount; rIndex++) {
+    for (let cIndex = 0; cIndex < colCount; cIndex++) {
       tiles.push(<Tile key={`${rIndex}-${cIndex}`} row={rIndex} column={cIndex} />)
     }
   }

@@ -24,7 +24,7 @@ class Game {
     this.board = board
   }
 
-  get isMine(rIndex, cIndex) {
+  isMine(rIndex, cIndex) {
     return this.board[rIndex][cIndex] === 1
   }
 
@@ -39,8 +39,8 @@ class Game {
       let rIndex = Utils.getRandomIntInRange(0, this.rowCount - 1)
       let cIndex = Utils.getRandomIntInRange(0, this.columnCount - 1)
 
-      if (!isMine(rIndex, cIndex)) {
-        placeMine(rIndex, cIndex)
+      if (!this.isMine(rIndex, cIndex)) {
+        this.placeMine(rIndex, cIndex)
         minesPlaced++
       }
     }
